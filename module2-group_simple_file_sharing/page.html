@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang = "en-GB">
+<head>
+	<meta charset = "utf-8">
+	<title>File Sharing System</title>
+	<link rel="stylesheet" type = "text/css" href="style.css"/>
+</head>
+<body>
+	<br><header class=pagetitle><b>Simple File Sharing Site</b></header>
+	<hr />
+	<br>
+	<main>
+		<form name = "input" action = "show.php" method = "post" target = "_blank">
+			<p class = "content">List Your Files: <input class = "button" type = "submit" name = "view" value = "view" /></p>
+		</form>
+		<br>
+
+		<form name = "input" action = "open.php" method = "post" target = "_blank">
+			<p class = "content">Open Filename: <input class = "text" type="text" name="openfile"/>
+				<input class = "button" type = "submit" name = "open" value = "open" /></p>
+		</form>
+		<br>
+
+    	<form name = "input" action = "upload.html" method = "post" target = "_blank">
+       		<p class = "content">Upload Files: <input class = "button" type = "submit" name = "upload" value = "upload" /></p>
+    	</form>
+		<br>
+
+		<form name = "input" action = "delete.php" method = "post" target = "_blank">
+			<p class = "content">Delete Files: <input class = "text" type="text" name="deletefile"/>
+				<input class = "button" type = "submit" name = "delete" value = "delete" />
+		 </p>
+		</form>
+		<br>
+
+		<form name = "input" action = "sharefile.php" method = "post" target = "_blank">
+			<p class = "content">Share Files to: <input class = "text" type="text" name="userShare"/> Enter Filename: <input class = "text" type="text" name="fileShare"/>
+				<input class = "button" type = "submit" name = "share" value = "share" />
+		 </p>
+		</form>
+		<br>
+		
+		<form method = "POST">
+		<button formaction="logout.php"> Logout</button>
+	    </form>
+  </main>
+</body>
+</html>

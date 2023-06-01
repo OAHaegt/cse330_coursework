@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang = "en-GB">
+<head>
+	<meta charset = "utf-8">
+	<title>Upload</title>
+</head>
+<body>
+	<header class = "MainPage">
+		</header>
+
+	<main>
+		<form enctype="multipart/form-data" action="upload.php" method="POST">
+
+		<input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+		<p> <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input"/> </p>
+	<p>
+		<input type="submit" value="Upload File" />
+	</p>
+</form>
+  </main>
+
+</body>
+</html>

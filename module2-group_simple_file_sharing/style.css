@@ -1,0 +1,39 @@
+body{
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+.Title {
+  text-align: center;
+  color:rgb(126, 12, 12);
+  font-family: Georgia, serif;
+  font-size: 60pt;
+}
+
+.content {
+  font-size: 10pt;
+  font-style:fantasy;
+}
+
+.login {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+
+}
+
+.logintitle {
+  text-align: center;
+  color:rgb(126, 12, 12);
+  font-family: Georgia, serif;
+  font-size: 40pt;
+}
+
+.pagetitle {
+  color:rgb(126, 12, 12);
+  font-family: Georgia, serif;
+  font-size: 40pt;
+}

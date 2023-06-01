@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head><title>Calculator</title></head>
+
+<body>
+
+    <div>
+
+        <b>First Number:</b>
+        <input type="number" id="firstnumber" step=any name="firstnumber" />
+
+        <b>Second Number:</b>
+        <input type="number" id="secondnumber" step=any name="secondnumber" /> <br><br>
+
+        <b>Operation:</b>
+        <input type="radio" id="add" name="operation" value="add" /> +
+        <input type="radio" id="subtract" name="operation" value="subtract" /> -
+        <input type="radio" id="multiply" name="operation" value="multiply" /> *
+        <input type="radio" id="divide" name="operation" value="divide" /> / <br><br>
+
+		<b>RESULT:</b><br />
+        <output id="result">Waiting for user input...</output>
+
+	</div>
+
+<script>
+
+	function calculate() {
+		let operation = document.getElementsByName("operation");
+		let num1 = parseFloat(document.getElementById("firstnumber").value);
+		let num2 = parseFloat(document.getElementById("secondnumber").value);
+		let op = null;
+		for (let i = 0; i < operation.length; i++) {
+			if (operation[i].checked) {
+				op = operation[i].value;
+				break;
+			}
+		}
+		let result = null;
+		if (isNaN(num1) || isNaN(num2) || op == null) {
+			result = "Waiting for user input...";
+			document.getElementById("result").textContent = result;
+			return;
+		}
+		switch (op) {
+			case "add":
+				result = num1 + num2;
+				break;
+			case "subtract":
+				result = num1 - num2;
+				break;
+			case "multiply":
+				result = num1 * num2;
+				break;
+			case "divide":
+				if (num2 == 0) {
+					result = "Invalid operation: Divide by zero";
+					break;
+				} else {
+					result = num1 / num2;
+					break;
+				}
+		}
+		document.getElementById("result").textContent = result;
+	}
+
+	document.addEventListener("DOMContentLoaded", function(){
+		let operation = document.getElementsByName("operation");
+		document.getElementById("firstnumber").addEventListener("change", calculate, false);
+		document.getElementById("secondnumber").addEventListener("change", calculate, false);
+		for (let i = 0; i < operation.length; i++) {
+			operation[i].addEventListener("click", calculate, false);
+		}
+	}, false)
+
+</script>
+
+</body>
+
+</html>

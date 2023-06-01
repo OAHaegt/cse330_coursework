@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head><title>Calculator</title></head>
+
+<body>
+
+  <form action="calc_setup.php" method="GET">
+
+    <b>First Number:</b>
+    <input type="number" step=any name="firstnumber" />
+
+    <b>Second Number:</b>
+    <input type="number" step=any name="lastnumber" /> <br><br>
+
+    <b>Operation:</b>
+    <input type="radio" name="operation" value="add" checked="checked" /> +
+    <input type="radio" name="operation" value="subtract" /> -
+    <input type="radio" name="operation" value="multiply" /> *
+    <input type="radio" name="operation" value="divide" /> / <br><br>
+
+    <input type="submit" value="Calculate" />
+    <input type="reset" value="Clear"/>
+
+  </form>
+
+</body>
+
+</html>
